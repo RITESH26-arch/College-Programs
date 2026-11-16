@@ -14,5 +14,38 @@ public class Staff {
         }
     }
 
-    void 
+    void setDesignation(){
+        this.designation = designation;
+    }
+
+    void setbirthDate(){
+        int i=0;
+        while(i<birthDate.length()){
+            if(Character.isDigit(birthDate.charAt(i))){
+                this.birthDate = birthDate;
+            }
+            else
+                System.out.println("\nPlease enter a valid date !");
+                break;
+        }
+    }
+
+    void setSalary(){
+        int i=0;
+        while(i<salary.size){
+            if(Character.isDigit(salary.charAt(i))){
+                this.salary = salary;
+            }
+            else
+                System.out.println("\nPlease enter a valid date !");
+                break;
+        }
+    }
+
+    Staff(String name, String designation, String birthDate, double salary){
+        setName();
+        setDesignation();
+        setbirthDate();
+        setSalary();
+    }
 }
